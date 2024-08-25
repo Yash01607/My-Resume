@@ -48,11 +48,11 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
  
-\titleformat{name=\section, numberless}{
-  \hspace{-5pt}\vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}
-    \vspace{-5pt}\rule{0.6\linewidth}{0.4pt}\hspace{1cm}\rule{0.34\linewidth}{0.4pt}
-\vspace{-20pt}]
+% \titleformat{name=\section, numberless}{
+%   \hspace{-5pt}\vspace{-4pt}\scshape\raggedright\large
+% }{}{0em}{}[\color{black}
+%     \vspace{-5pt}\rule{0.6\linewidth}{0.4pt}\hspace{1cm}\rule{0.34\linewidth}{0.4pt}
+% \vspace{-20pt}]
  
  
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -96,6 +96,17 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\customsection}[2]{
+  \noindent
+  \begin{minipage}[t]{0.55\textwidth}
+    \section{#1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.40\textwidth}
+    \section{#2}
+  \end{minipage}
+}
+
  
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -118,7 +129,7 @@
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Indian Institute of Technology (ISM), Dhanbad}{Dhanbad, JK}
+{Indian Institute of Technology (IIT-ISM), Dhanbad}{Dhanbad, JK}
 {Bachelor of Technology in Petroleum Engineering}{July 2019 -- May 2023}
 \resumeSubHeadingListEnd
 
@@ -130,21 +141,21 @@
 \resumeSubSubheading
 {\textbf{Project - GIDR} $|$ \emph{LangChain, LangServe, PineCone, Google Cloud, FastAPI, NodeJS}}{Nov 2023 -- Present}
 \resumeItemListStart
-\resumeItem{Co-developing an AI based project to generate vector embeddings for documents, for answering user query about the documents, using the RAG framework.}
-\resumeItem{Implemented various document \textbf{vector-embeddings} generation methods as independent micro-services.}
-\resumeItem{Co-created a search service that Scrapes content from websites to answer user queries.}
-\resumeItem{Integrated GIDR with various AI models like \textbf{OpenAI, Claude, Gemini, HuggingFace, Groq and LLaMA}.}
-\resumeItem{Worked on building a \textbf{NodeJS layer} to manage users and all micro-services.}
-\resumeItem{Boosted a process's performance by\textbf{ 67\%} using Multi-Threading.}
-\resumeItem{Developed multiple SQL and database migration scripts}
+\resumeItem{Co-developing a \textbf{GEN-AI soltion} to generate documents vector embeddings for enhanced query responses, using the \textbf{RAG Framework}(Retrieval-Augmented Generation) .}
+\resumeItem{Implemented various document \textbf{Vector-Embeddings Techniques} as independent Microservices.}
+\resumeItem{Reduced the Search service response time by \textbf{80\%} by implementing \textbf{MultiThreading and Caching}.}
+\resumeItem{Boosted Ingestion process's performance by\textbf{ 70\%} using Multi-Threading and Batch Calls.}
+\resumeItem{Resolved over \textbf{20 critical bugs} and constantly addressed production issues to ensure system stability.}
+\resumeItem{Integrated GIDR with over \textbf{15 Models} like \textbf{OpenAI, Claude, Gemini, Groq and LLaMA}.}
+% \resumeItem{Worked on building a \textbf{NodeJS layer} to manage users and all micro-services.}
 \resumeItemListEnd
 
 \resumeSubSubheading
 {\textbf{Project - Ecommerce Website}(Internal) $|$ \emph{Django, ReactJS, ReduxJS, BootStrap, DRF}}{Aug 2023 -- Oct 2023}
 \resumeItemListStart
-\resumeItem{Built a \textbf{Full-Stack Ecommerce website} from scratch as a Case-Study. Implemented designs, features, models and worked with APIs.}
+\resumeItem{Built a \textbf{Full-Stack Ecommerce website} from scratch. Implemented designs, features, models, APIs.}
 \resumeItem{Received an internal rating of \textbf{96/100} for the Case-Study.}
-\resumeItem{\textbf{Features}:  Admin Access, Pagination, Responsive UI, Cart and checkout, Search and Filter, Product Categories.}
+\resumeItem{\textbf{Features}:  Admin Access, Pagination, Responsive UI, Search and Filter, Token Authentication, Error Handling, Order Management, Cart and Checkout, Product Categories.}
 \resumeItem{\textbf{Live Project URL: } \href{https://simplishopee.pythonanywhere.com/}{\raisebox{-0.1\height}{\faGlobeAsia} \underline{SimpliShopee}}}
 \resumeItemListEnd
 
@@ -197,28 +208,29 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\section*{
-  \makebox[0.65\textwidth][l]{Technical Skills}%
-  \makebox[0.30\textwidth][l]{Competitive Programming}
- }
+% \customsection{Technical Skills}{Competitive Programming}
 
-\begin{minipage}[t]{0.55\textwidth}
+\begin{minipage}[t]{0.60\textwidth}
+  \section{Technical Skills}
   \vspace{1pt}
-  \begin{tabular}{>{\raggedright}p{2.2cm} p{0.3cm} p{8.8cm}}
-    \textbf{Languages} & : & C/C++, JavaScript, Python, Java-Basic                           \\
-    \textbf{Backend}   & : & NodeJS, ExpressJS, Django, FastAPI, Socket.IO                   \\
-    \textbf{AI-Tech}   & : & LangChain, LangSmith, LangServe, OpenAI, ClaudeAI, Gemini, Groq \\
-    \textbf{Frontend}  & : & ReactJS, NextJS, ReduxJS, BootStrap, GraphQL                    \\
-    \textbf{DataBases} & : & MySQL, Pinecone, MongoDB, FireBase, PostgreSQL                  \\
-    \textbf{Web3}      & : & Solidity, Metamask, Ethereum                                    \\
+  \begin{tabular}{>{\raggedright}p{2.3cm} p{0.3cm} p{8.8cm}}
+    \textbf{Languages}  & : & C/C++, JavaScript, Python, Java-Basic          \\
+    \textbf{Backend}    & : & NodeJS, ExpressJS, Django, FastAPI, Socket.IO  \\
+    \textbf{AI-Tech}    & : & LangChain, LangSmith, LangServe, OpenAI,       \\
+    {}                  &   & ClaudeAI, Gemini, Groq                         \\
+    \textbf{Frontend}   & : & ReactJS, NextJS, ReduxJS, BootStrap, GraphQL   \\
+    \textbf{DataBases}  & : & MySQL, Pinecone, MongoDB, FireBase, PostgreSQL \\
+    \textbf{Cloud-Tech} & : & Google Cloud PLatform                          \\
+    \textbf{Web3}       & : & Solidity, Metamask, Ethereum                   \\
   \end{tabular}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.40\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
+  \section{Competitive Programming}
   \raggedleft
   \vspace{1pt}
-  \renewcommand{\arraystretch}{1.1}
-  \begin{tabular}{>{\raggedright}p{2.5cm} p{0.1cm} P{2cm} P{2cm}}
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{>{\raggedright}p{2.5cm} p{0.3cm} P{1.8cm} P{2cm}}
     {}                  & {} & \textbf{Profile}                                                          & \textbf{Rating} \\
     \textbf{CodeChef}   & :  & {\href{https://www.codechef.com/users/yash3457}{\underline{yash3457}}}    & 1970            \\
     \textbf{LeetCode}   & :  & {\href{https://leetcode.com/u/Yash_01/}{\underline{Yash\_01}}}            & 1801            \\
@@ -226,6 +238,7 @@
     \textbf{AtCoder}    & :  & {\href{https://atcoder.jp/users/Yash_01}{\underline{Yash\_01}}}           & 843             \\
     \textbf{HackerRank} & :  & {\href{https://www.hackerrank.com/profile/Yash_01}{\underline{Yash\_01}}} & 6-Star          \\
   \end{tabular}
+
 \end{minipage}
 
 \end{document}
