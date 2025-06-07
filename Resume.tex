@@ -66,11 +66,26 @@
   }
 }
  
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeEducationheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\footnotesize{#4}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeExperienceheading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} - \textit{\small#2} & #3 \\
+      \textit{\small#4} & \textit{\footnotesize{#5}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 $|$ \textit{\small#2}& \textit{\footnotesize{#3}} \\
     \end{tabular*}\vspace{-7pt}
 }
  
@@ -80,16 +95,8 @@
       \textit{\small{#1}} & \textit{\footnotesize{#2}} \\
     \end{tabular*}\vspace{-7pt}
 }
- 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textit{\footnotesize{#2}} \\
-    \end{tabular*}\vspace{-7pt}
-}
- 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
- 
+
+  
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
  
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -129,46 +136,64 @@
 
 \section{Education}
 \resumeSubHeadingListStart
-\resumeSubheading
+\resumeEducationheading
 {Indian Institute of Technology (IIT ISM), Dhanbad}{Dhanbad, JK}
 {Bachelor of Technology in Petroleum Engineering}{Jul 2019 -- May 2023}
 \resumeSubHeadingListEnd
 
 \section{Experience}
 \resumeSubHeadingListStart
-\resumeSubheading
-{Beehyv Software Solutions Pvt. Ltd.}{Hyderabad, TS}
-{Full-Stack Software Developer}{Jul 2023 -- Present}
-\resumeSubSubheading
-{\textbf{Project - GIDR} $|$ \emph{LangChain, LangServe, PineCone, Google Cloud, FastAPI, NodeJS}}{Nov 2023 -- Present}
-\resumeItemListStart
-\resumeItem{Co-developing a \textbf{GEN-AI solution} to transform unstructured enterprise data into organized intelligence for answering questions and analyzing data by generating data vector embeddings. }
-\resumeItem{Worked on building a \textbf{NodeJS MicroService} for managing user data, user authentication, and sessions.}
-\resumeItem{Built MicroServices for 3 types of \textbf{Vector-Embedding} generation methods, managed by \textbf{Messaging Queues}.}
-\resumeItem{Reduced the Search service response time by \textbf{80\%} by implementing \textbf{Multithreading and Caching}.}
-\resumeItem{Boosted the Ingestion process's performance by \textbf{70\%} through Multi-Threading and Batch Calls.}
-\resumeItem{Regularly engaged in Research and Development of proof-of-concepts (POCs) to enhance project development.}
-\resumeItem{Resolved over \textbf{50 critical bugs} and constantly addressed production issues to ensure system stability.}
-\resumeItem{Integrated GIDR with over \textbf{20 LLM Models} like \textbf{OpenAI, Claude, Gemini, Groq and LLaMA}.}
-\resumeItemListEnd
 
-\resumeSubSubheading
-{\textbf{Project - E-commerce Website}(Internal) $|$ \emph{Django, ReactJS, ReduxJS, BootStrap, DRF}}{Aug 2023 -- Oct 2023}
+\vspace{3pt}
+
+\resumeExperienceheading
+{Privado.ai}{Software Developer}{Pune, MH}
+{Django, React, MongoDB, Celery, Amazon AWS, Redis, Docker, D3.js}{Feb 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Built a \textbf{Full-Stack Ecommerce website} from scratch. Implemented design, features, models and APIs.}
-\resumeItem{Received an internal rating of \textbf{96/100} for the case study.}
-\resumeItem{\textbf{Features}:  Admin Access, Pagination, Responsive UI, Search and Filter, Token Authentication, Error Handling, Order Management, Cart and Checkout, Product Categories.}
-\resumeItem{\textbf{Repository: }\href{https://github.com/Yash01607/SimpliShopee}{\raisebox{-0.2\height}{\faGithub} \underline{github.com}}
-  \hspace{5pt}
-  \textbf{Live Project URL: } \href{https://simplishopee.pythonanywhere.com/}{\raisebox{-0.1\height}{\faGlobeAsia} \underline{SimpliShopee}}}
+\resumeItem{Responsible for \textbf{end-to-end product ownership}, including initial POCs, frontend and backend engineering, UI/UX design, testing, and post release maintenance.}
+\resumeItem{Built efficient MongoDB aggregation pipelines with precomputation for graph dashboard.}
+\resumeItem{Worked with D3.js to build interactive graphs for dashboard visualizations.}
+\resumeItem{Worked on the MobileScan module that embeds a mobile device in the UI, captures user actions, and records network logs for PII and third-party analysis.}
+\resumeItem{Ensured efficient session handling for embedded devices billed per minute ,balancing seamless user interaction with cost-effective device usage.}
 \resumeItemListEnd
 
 \vspace{5pt}
-\resumeSubheading
-{Iauro Systems Pvt. Ltd.}{Pune, MH}
-{Software Developer - Intern}{May 2022  -- Jul 2022}
-\resumeSubSubheading
-{\textbf{Project - Smile Foundation} $|$ \emph{ReactJS, ReduxJS, Vendure, Stripe, GraphQL, MySQL}}{}
+
+\resumeExperienceheading
+{Beehyv Software Solutions}{Software Developer}{Hyderabad, TS}
+{LangChain, LangGraph, LangServe, Pinecone, Google Cloud, FastAPI, NodeJS, MySQL}{Jul 2023 -- Present}
+% \resumeSubSubheading
+% {\textbf{Project - GIDR} $|$ \emph{LangChain, LangGraph, Pinecone, Google Cloud, FastAPI, NodeJS}}{Nov 2023 -- Present}
+\resumeItemListStart
+\resumeItem{Co-developed \textbf{GIDR} - A knowledge management and document querying software that uses AI to provide insights and answers from your documents.}
+\resumeItem{Utilized \textbf{LangGraph} to build independent, \textbf{Reusable Component Nodes} that provides users flexibility to design custom query-answering workflows}
+% \resumeItem{Worked on building a \textbf{NodeJS MicroService} for managing user data, user authentication, and sessions.}
+% \resumeItem{Built MicroServices for 3 types of \textbf{Vector-Embedding} generation methods, managed by \textbf{Messaging Queues}.}
+\resumeItem{Reduced the Search service response time by \textbf{80\%} by implementing Multithreading and Caching.}
+\resumeItem{Regularly engaged in Research and Development of proof-of-concepts (POCs) to enhance project development.}
+\resumeItem{Boosted the Ingestion process's performance by \textbf{70\%} through Multi-Threading and Batch Calls.}
+\resumeItem{Resolved over \textbf{50 critical bugs} and constantly addressed production issues to ensure system stability.}
+\resumeItem{Integrated GIDR with over \textbf{25 LLM Models} from \textbf{OpenAI, Claude, Gemini, Groq and LLaMA}.}
+\resumeItemListEnd
+
+% \resumeSubSubheading
+% {\textbf{Project - E-commerce Website}(Internal) $|$ \emph{Django, ReactJS, ReduxJS, BootStrap, DRF}}{Aug 2023 -- Oct 2023}
+% \resumeItemListStart
+% \resumeItem{Built a \textbf{Full-Stack Ecommerce website} from scratch. Implemented design, features, models and APIs.}
+% \resumeItem{Received an internal rating of \textbf{96/100} for the case study.}
+% \resumeItem{\textbf{Features}:  Admin Access, Pagination, Responsive UI, Search and Filter, Token Authentication, Error Handling, Order Management, Cart and Checkout, Product Categories.}
+% \resumeItem{\textbf{Repository: }\href{https://github.com/Yash01607/SimpliShopee}{\raisebox{-0.2\height}{\faGithub} \underline{github.com}}
+%   \hspace{5pt}
+%   \textbf{Live Project URL: } \href{https://simplishopee.pythonanywhere.com/}{\raisebox{-0.1\height}{\faGlobeAsia} \underline{SimpliShopee}}}
+% \resumeItemListEnd
+
+\vspace{5pt}
+
+\resumeExperienceheading
+{Iauro Systems}{Software Developer - Intern}{Pune, MH}
+{ReactJS, ReduxJS, Vendure, Stripe, GraphQL, MySQL}{May 2022  -- Jul 2022}
+% \resumeSubSubheading
+% {\textbf{Project - Smile Foundation} $|$ \emph{ReactJS, ReduxJS, Vendure, Stripe, GraphQL, MySQL}}{}
 \resumeItemListStart
 \resumeItem{Developed a Web-Application for selling handmade products using \textbf{Vendure} and \textbf{React with Redux}.}
 \resumeItem{Developed custom plugins to customize Vendure's functionality and integrated the Stripe payment gateway.}
@@ -180,7 +205,7 @@
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\textbf{AgroTech} $|$ \emph{ReactJS, ReduxJS, NodeJS, ExpressJS,  MongoDB, Socket.IO, Cloudinary}}{Dec 2021 -- Jan 2022}
+{\textbf{AgroTech}} {ReactJS, ReduxJS, NodeJS, ExpressJS,  MongoDB, Socket.IO, Cloudinary}{Dec 2021 -- Jan 2022}
 \resumeItemListStart
 \resumeItem{Developed a platform for buying and selling Agricultural products using the \textbf{MERN} stack and \textbf{Web Sockets}.}
 \resumeItem{\textbf{Features}: Admin role, Live chat, JWT-Auth, Cart and checkout, Search and Filter, User Profile, Categories.}
@@ -189,8 +214,19 @@
   \textbf{Live Project URL: }\href{https://agrotech-yajt.onrender.com/}{\raisebox{-0.1\height}{\faGlobeAsia} \underline{AgroTech}}}
 \resumeItemListEnd
 
+% \resumeProjectHeading
+% {\textbf{SimpleShopee}} {ReactJS, ReduxJS, NodeJS, ExpressJS,  MongoDB, Socket.IO, Cloudinary}{Dec 2021 -- Jan 2022}
+% \resumeItemListStart
+% \resumeItem{Developed a platform for buying and selling Agricultural products using the \textbf{MERN} stack and \textbf{Web Sockets}.}
+% \resumeItem{\textbf{Features}: Admin role, Live chat, JWT-Auth, Cart and checkout, Search and Filter, User Profile, Categories.}
+% \resumeItem{\textbf{Repository: }\href{https://github.com/Yash01607/Ecommerce_website}{\raisebox{-0.2\height}{\faGithub} \underline{github.com}}
+%   \hspace{5pt}
+%   \textbf{Live Project URL: }\href{https://agrotech-yajt.onrender.com/}{\raisebox{-0.1\height}{\faGlobeAsia} \underline{AgroTech}}}
+% \resumeItemListEnd
+
+
 \resumeProjectHeading
-{\textbf{Memoreum} $|$ \emph{ReactJS, ReduxJS, NodeJS, ExpressJS ,MongoDB, Google-OAuth, Mongoose }}{Mar 2023 -- Apr 2023}
+{\textbf{Memoreum}} {ReactJS, ReduxJS, NodeJS, ExpressJS ,MongoDB, Google-OAuth, Mongoose }{Mar 2023 -- Apr 2023}
 \resumeItemListStart
 \resumeItem{Developed a \textbf{MERN} stack based \textbf{Social Media Platform} for sharing memories and connecting with friends.}
 \resumeItem{\textbf{Features}: Post Management, Personalized Feed, Like and Comment, Google OAuth, JWT-Authentication.}
@@ -200,7 +236,7 @@
 \resumeItemListEnd
 
 % \resumeProjectHeading
-% {\textbf{CrowdWallet} $|$ \emph{NextJS, Web3, Solidity, Metamask.}}{Dec 2021 -- Jan 2022}
+% {\textbf{CrowdWallet}}{NextJS, Web3, Solidity, Metamask.}{Dec 2021 -- Jan 2022}
 % \resumeItemListStart
 % \resumeItem{Developed a \textbf{Blockchain-based} web app for \textbf{raising crowdfunding} for entrepreneur.}
 % \resumeItem{Created a voting system for investors to approve spending requests of raised funds.}
@@ -217,12 +253,12 @@
   \vspace{1pt}
   \begin{tabular}{>{\raggedright}p{2.1cm} p{0.3cm} p{9.8cm}}
     \textbf{\small{Languages}}  & : & \small{C/C++, JavaScript, Python, Java-Basic, TypeScript, SQL}     \\
-    \textbf{\small{Backend}}    & : & \small{NodeJS, ExpressJS, Django, FastAPI, Mongoose, Socket.IO}    \\
-    \textbf{\small{AI Tech}}    & : & \small{LangChain, LangServe, OpenAI, Claude, Llama, Gemini, Groq}  \\
-    \textbf{\small{Frontend}}   & : & \small{ReactJS, NextJS, ReduxJS, GraphQL, BootStrap}               \\
-    \textbf{\small{DataBases}}  & : & \small{MySQL, Alembc, MongoDB, FireBase, PostgreSQL, Pinecone}     \\
-    \textbf{\small{DevOps}}     & : & \small{Docker, Google Cloud Platform, GitHub Workflows}            \\
-    \textbf{\small{Web3}}       & : & \small{Solidity, Metamask, Ethereum}                               \\
+    \textbf{\small{Backend}}    & : & \small{Django, FastAPI, NodeJS, ExpressJS, Mongoose, Celery, Redis, Socket.IO}    \\
+    \textbf{\small{AI Tech}}    & : & \small{LangChain, LangGraph, OpenAI, Claude, Llama, Gemini, Groq}  \\
+    \textbf{\small{Frontend}}   & : & \small{ReactJS, NextJS, ReduxJS, D3.js, BootStrap}               \\
+    \textbf{\small{DataBases}}  & : & \small{MongoDB, MySQL, Alembic, FireBase, PostgreSQL, Pinecone}     \\
+    \textbf{\small{DevOps}}     & : & \small{Docker, AWS, Google Cloud, GitHub Workflows}            \\
+    % \textbf{\small{Web3}}       & : & \small{Solidity, Metamask, Ethereum}                               \\
   \end{tabular}
 \end{minipage}
 \hfill
